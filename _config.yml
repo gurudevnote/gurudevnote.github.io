@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Your Name
+name: Huy Nguyen Huu
 
 # Short bio or description (displayed in the header)
 description: Web Developer from Somewhere
@@ -38,6 +38,9 @@ disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
+
+# Enter your Google Tag manager tracking code (e.g. GTM-MZP8WQ) to activate tracking
+google_tag_manager: GTM-MZP8WQ
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
