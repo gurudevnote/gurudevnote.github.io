@@ -15,3 +15,5 @@ Use curl to test your proxy
 ```bash
 curl -x localhost:8080 https://google.com
 ```
+
+See more [https://github.com/mitmproxy/mitmproxy](https://github.com/mitmproxy/mitmproxy)
