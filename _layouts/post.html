@@ -7,7 +7,10 @@ layout: default
 
   {% if page.tags %}  
   <div class="tags">
-  	Tags: {{ page.tags | join: ', ' }}  	
+  	Tags:
+    {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}/tag/{{ tag }}">{{tag}}</a>,
+    {% endfor %}
   </div>
   {% endif %}
 
