@@ -90,3 +90,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - package.json
+  - package-lock.json
