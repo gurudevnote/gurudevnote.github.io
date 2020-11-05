@@ -24,3 +24,4 @@ Write your code to query element by xpath selector
 
 See more:
 - [https://stackoverflow.com/questions/48448586/how-to-use-xpath-in-chrome-headlesspuppeteer-evaluate](https://stackoverflow.com/questions/48448586/how-to-use-xpath-in-chrome-headlesspuppeteer-evaluate)
+- [https://gist.github.com/LeCoupa/8c305ec8c713aad07b14](https://gist.github.com/LeCoupa/8c305ec8c713aad07b14)
