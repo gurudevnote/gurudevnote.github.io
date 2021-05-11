@@ -15,7 +15,7 @@ sudo docker run --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080
 ```
 - modify response of domain vnexpress.net by replacing body element by `<body>test</body>` 
 ```bash
-sudo docker run --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmproxy -B "/~d vnexpress.net/<body.*/<body>test</body>"
+sudo docker run --net=host --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmproxy --ssl-insecure -B "/~d vnexpress.net/<body.*/<body>test</body>"
 ```
 
 Access the url [http://0.0.0.0:8081/#/flows](http://0.0.0.0:8081/#/flows) to manage your proxy server
