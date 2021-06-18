@@ -47,6 +47,16 @@ This post will list of useful software on ubuntu
 - https://www.openshot.org/
 - https://github.com/OpenShot/openshot-qt
 
+## ffmpeg
+- https://github.com/FFmpeg/FFmpeg
+- https://ffmpeg.org/
+
+# 4. Audio editor
+## audacity
+- https://github.com/audacity/audacity
+- https://wiki.audacityteam.org/wiki/For_Developers
+- https://www.audacityteam.org/
+
 # 5. Text editor
 ## gpedit
 ## meld
