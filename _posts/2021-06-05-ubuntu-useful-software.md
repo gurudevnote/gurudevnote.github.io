@@ -7,55 +7,55 @@ This post will list of useful software on ubuntu
 
 # 1. Screenshot
 ## flameshot
-- [https://github.com/flameshot-org/flameshot]()
-- [https://flameshot.org/]()
+- [https://github.com/flameshot-org/flameshot](https://github.com/flameshot-org/flameshot)
+- [https://flameshot.org/](https://flameshot.org/)
 
 ## shutter
-- [https://github.com/shutter-project/shutter]()
-- [https://shutter-project.org/]()
+- [https://github.com/shutter-project/shutter](https://github.com/shutter-project/shutter)
+- [https://shutter-project.org/](https://shutter-project.org/)
 
 ## kazam
-- [https://github.com/hzbd/kazam]()
-- [https://launchpad.net/kazam]()
-- [https://code.launchpad.net/kazam]()
+- [https://github.com/hzbd/kazam](https://github.com/hzbd/kazam)
+- [https://launchpad.net/kazam](https://launchpad.net/kazam)
+- [https://code.launchpad.net/kazam](https://code.launchpad.net/kazam)
 
 ## SimpleScreenRecorder
-- [https://github.com/MaartenBaert/ssr]()
+- [https://github.com/MaartenBaert/ssr](https://github.com/MaartenBaert/ssr)
 
 # 2. Download manager
 ## uget
-- [https://ugetdm.com/]()
-- [https://github.com/ugetdm/uget]()
-- [https://sourceforge.net/p/urlget/uget2/ci/master/tree/]()
+- [https://ugetdm.com/](https://ugetdm.com/)
+- [https://github.com/ugetdm/uget](https://github.com/ugetdm/uget)
+- [https://sourceforge.net/p/urlget/uget2/ci/master/tree/](https://sourceforge.net/p/urlget/uget2/ci/master/tree/)
 
 # 3. Image processing
 ## gimp
 ## inkscape
-- [https://inkscape.org/]()
-- [https://github.com/inkscape/inkscape]()
+- [https://inkscape.org/](https://inkscape.org/)
+- [https://github.com/inkscape/inkscape](https://github.com/inkscape/inkscape)
 
 # 4. Video editor
 ## kdenlive
-- [https://kdenlive.org/en/]()
-- [https://github.com/KDE/kdenlive]()
+- [https://kdenlive.org/en/](https://kdenlive.org/en/)
+- [https://github.com/KDE/kdenlive](https://github.com/KDE/kdenlive)
 
 ## shotcut
-- [https://github.com/mltframework/shotcut]()
-- [https://shotcut.org/]()
+- [https://github.com/mltframework/shotcut](https://github.com/mltframework/shotcut)
+- [https://shotcut.org/](https://shotcut.org/)
 
 ## openshot
-- [https://www.openshot.org/]()
-- [https://github.com/OpenShot/openshot-qt]()
+- [https://www.openshot.org/](https://www.openshot.org/)
+- [https://github.com/OpenShot/openshot-qt](https://github.com/OpenShot/openshot-qt)
 
 ## ffmpeg
-- [https://github.com/FFmpeg/FFmpeg]()
-- [https://ffmpeg.org/]()
+- [https://github.com/FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg)
+- [https://ffmpeg.org/](https://ffmpeg.org/)
 
 # 4. Audio editor
 ## audacity
-- [https://github.com/audacity/audacity]()
-- [https://wiki.audacityteam.org/wiki/For_Developers]()
-- [https://www.audacityteam.org/]()
+- [https://github.com/audacity/audacity](https://github.com/audacity/audacity)
+- [https://wiki.audacityteam.org/wiki/For_Developers](https://wiki.audacityteam.org/wiki/For_Developers)
+- [https://www.audacityteam.org/](https://www.audacityteam.org/)
 
 # 5. Text editor
 ## gpedit
@@ -70,23 +70,23 @@ This post will list of useful software on ubuntu
 
 # 7. 3D, 2D editor
 ## blender
-- [https://www.blender.org/]()
-- [https://github.com/blender/blender]()
+- [https://www.blender.org/](https://www.blender.org/)
+- [https://github.com/blender/blender](https://github.com/blender/blender)
 
 # 8. Document viewer
 ## evince
 
 # 9. Digital painting application
 ## krita
-- [https://github.com/KDE/krita]()
-- [https://krita.org/en]()
+- [https://github.com/KDE/krita](https://github.com/KDE/krita)
+- [https://krita.org/en](https://krita.org/en)
 
 ## pinta
-- [https://github.com/PintaProject/Pinta]()
-- [https://www.pinta-project.com/]()
+- [https://github.com/PintaProject/Pinta](https://github.com/PintaProject/Pinta)
+- [https://www.pinta-project.com/](https://www.pinta-project.com/)
 
 ## mypaint
-- [https://github.com/mypaint/mypaint]()
+- [https://github.com/mypaint/mypaint](https://github.com/mypaint/mypaint)
 - [http://mypaint.org/]()
 
 # 10. Vitual machine
@@ -94,5 +94,5 @@ This post will list of useful software on ubuntu
 
 # 11. Remote desktop
 ## remmina
-- [https://github.com/FreeRDP/Remmina]()
-- [https://remmina.org/]()
+- [https://github.com/FreeRDP/Remmina](https://github.com/FreeRDP/Remmina)
+- [https://remmina.org/](https://remmina.org/)
