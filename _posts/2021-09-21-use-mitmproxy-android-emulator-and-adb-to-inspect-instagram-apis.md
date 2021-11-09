@@ -98,3 +98,5 @@ VBoxManage modifyvm vm-name --nested-hw-virt on
 - [https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8](https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8)
 - [https://github.com/shroudedcode/apk-mitm](https://github.com/shroudedcode/apk-mitm)
 - [https://gist.github.com/mrk-han/66ac1a724456cadf1c93f4218c6060ae](https://gist.github.com/mrk-han/66ac1a724456cadf1c93f4218c6060ae)
+- [https://android.tutorials24x7.com/blog/how-to-install-android-sdk-tools-on-ubuntu-20-04](https://android.tutorials24x7.com/blog/how-to-install-android-sdk-tools-on-ubuntu-20-04)
+- [https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8](https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8)
