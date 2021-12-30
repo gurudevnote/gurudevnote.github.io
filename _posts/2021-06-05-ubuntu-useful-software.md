@@ -96,3 +96,9 @@ This post will list of useful software on ubuntu
 ## remmina
 - [https://github.com/FreeRDP/Remmina](https://github.com/FreeRDP/Remmina)
 - [https://remmina.org/](https://remmina.org/)
+
+# 12. home design
+## sweethome3d
+- [https://www.sweethome3d.com/](https://www.sweethome3d.com/)
+- [https://sourceforge.net/projects/sweethome3d/](https://sourceforge.net/projects/sweethome3d/)
+- [https://github.com/SweetHome3D/SweetHome3D](https://github.com/SweetHome3D/SweetHome3D)
