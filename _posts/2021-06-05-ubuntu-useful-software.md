@@ -75,6 +75,13 @@ This post will list of useful software on ubuntu
 
 # 8. Document viewer
 ## evince
+-[https://gitlab.gnome.org/GNOME/evince](https://gitlab.gnome.org/GNOME/evince)
+-[https://github.com/GNOME/evince](https://github.com/GNOME/evince)
+
+## okular - Universal Document Viewer
+- [https://okular.kde.org/](https://okular.kde.org/)
+- [https://github.com/KDE/okular](https://github.com/KDE/okular)
+
 
 # 9. Digital painting application
 ## krita
