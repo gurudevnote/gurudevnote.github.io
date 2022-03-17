@@ -20,6 +20,42 @@ Write your code to query element by xpath selector
         .singleNodeValue;
 
     console.log(featureArticle.textContent);
+    
+    // or using the function
+
+    // only get first element
+    function getElementByXpath(xpath) {
+        return document.evaluate(
+            xpath, document, null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE, null
+        ).singleNodeValue
+    }
+    
+    // get multiple elements
+    function getElementsByXpath(xpath) {
+        const snapshot = document.evaluate(
+            xpath, document, null,
+            XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null
+        );
+    
+        return [...Array(snapshot.snapshotLength)]
+            .map((_, i) => snapshot.snapshotItem(i));
+    }
+    
+    
+    // get multiple node element
+    function getNoteValueOfElementsByXpath(xpath) {
+        const snapshot = document.evaluate(
+            xpath, document, null,
+            XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null
+        );
+    
+        return [...Array(snapshot.snapshotLength)]
+            .map((_, i) => snapshot.snapshotItem(i).nodeValue);
+    }
+    
+    // for example to get all href of a tag
+    getNoteValueOfElementsByXpath('//a[@href]/@href');
 ```
 
 See more:
