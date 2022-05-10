@@ -5,30 +5,45 @@ tags: ["linux","command","sed", "jq","grep","bash","curl","awk","xargs","develop
 ---
 
 # Linux commands
+
 ## man
+
 ## ls
+
 ## sort
+
 ## less
+
 ## more
+
 ## tail
+
 ## egrep
+
 ## grep
+
 ## sed
 - extract regex group data
 ```bash
 echo "sonar.projectKey=adadfawefaowiejaowejo" | sed -nr "s/sonar.projectKey\s*=\s*(.+)$/\1/p"
 ```
 ## awk
+
 ## xargs
+
 ## jq
+
 ## vi
+
 ## curl
+
 - post json data
 ```bash 
 curl -sd -X POST '{
   "test": "event"
 }'   -H "Content-Type: application/json"   https://eo72gtowgc1gvke.m.pipedream.net | jq
 ```
+
 - get json data 
 ```bash
 curl -s -X GET "https://httpbin.org/anything" -H "accept: application/json" | jq 
@@ -40,20 +55,34 @@ curl -s -X GET "https://httpbin.org/anything" -H "accept: application/json"  -H 
 ```
 ## git
 
+## gnome-terminal
+
+- Execute a command in new terminal tab
+
+```bash
+gnome-terminal --tab --command="bash -c 'ls ; $SHELL'"
+gnome-terminal --tab --command="bash -c 'll ; $SHELL'"
+```
 
 # Create alias command
 
 # Bash script
+
 ## variable
+
 ## loop
+
 ## condition
+
 ## How To Assign Output of a Linux Command to a Variable
+
 ```bash
 variable_name=$(ls)
 variable_name=$(ls -a)
 #use backtick operator
 FILES=`sudo find . -type f -print | wc -l`
 ```
+
 ## Out put to file (see more [https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file))
 ```
           | visible in terminal |   visible in file   | existing
