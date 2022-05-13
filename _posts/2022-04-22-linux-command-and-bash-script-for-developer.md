@@ -23,10 +23,13 @@ tags: ["linux","command","sed", "jq","grep","bash","curl","awk","xargs","develop
 ## grep
 
 ## sed
+
 - extract regex group data
+
 ```bash
 echo "sonar.projectKey=adadfawefaowiejaowejo" | sed -nr "s/sonar.projectKey\s*=\s*(.+)$/\1/p"
 ```
+
 ## awk
 
 ## xargs
@@ -38,6 +41,7 @@ echo "sonar.projectKey=adadfawefaowiejaowejo" | sed -nr "s/sonar.projectKey\s*=\
 ## curl
 
 - post json data
+
 ```bash 
 curl -sd -X POST '{
   "test": "event"
@@ -45,15 +49,31 @@ curl -sd -X POST '{
 ```
 
 - get json data 
+
 ```bash
 curl -s -X GET "https://httpbin.org/anything" -H "accept: application/json" | jq 
 ```
 
 - spec user-agent
+
 ```bash
 curl -s -X GET "https://httpbin.org/anything" -H "accept: application/json"  -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0" | jq
 ```
+
 ## git
+
+- Specify ssh private key when clone git
+
+```bash
+git -c core.sshCommand="ssh -i ~/.ssh/your_private_key" clone git@github.com:your_account_name/your_repo.git
+```
+
+- Setup repo to use ssh-key
+
+```bash
+git config core.sshCommand 'ssh -i ~/.ssh/your_private_key'
+```
+
 
 ## gnome-terminal
 
@@ -62,6 +82,14 @@ curl -s -X GET "https://httpbin.org/anything" -H "accept: application/json"  -H 
 ```bash
 gnome-terminal --tab --command="bash -c 'ls ; $SHELL'"
 gnome-terminal --tab --command="bash -c 'll ; $SHELL'"
+```
+
+## pygmentize
+
+- High light your code
+
+```bash
+pygmentize -g ./config/deploy.rb
 ```
 
 # Create alias command
@@ -107,7 +135,6 @@ FILES=`sudo find . -type f -print | wc -l`
 |& tee    |   yes    |   yes    |   yes    |   yes    | overwrite
 |& tee -a |   yes    |   yes    |   yes    |   yes    |  append
 ```
-
 
 # An example to build sonarqube server and use sonarqube scanner to analytic source code
 
