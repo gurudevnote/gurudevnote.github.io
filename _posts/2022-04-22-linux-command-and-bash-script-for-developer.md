@@ -60,6 +60,8 @@ echo "1: " | awk 'BEGIN { FS=":" } /1/ { print $1 }'
 echo "1, " | awk -F ','  '{print $1}'
 #use regular expression for field separator
 echo "foo 10 bar 15 aaa 99 aaw 88 55" | awk -F'\\s*[0-9]+\\s*' '{print $2}'
+#sum files size on a folder
+ls -l | awk 'BEGIN {sum=0} {sum=sum+$5} END {print sum}'
 ```
 
 ## xargs
