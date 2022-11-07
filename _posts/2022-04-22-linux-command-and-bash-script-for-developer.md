@@ -45,6 +45,12 @@ alias dd='git difftool -d'
 echo "sonar.projectKey=adadfawefaowiejaowejo" | sed -nr "s/sonar.projectKey\s*=\s*(.+)$/\1/p"
 ```
 
+- print 4 line after match
+```bash
+curl -s http://httpbin.org/anything | sed -n '/headers/,+4p'
+curl -s http://httpbin.org/anything | sed -n '/headers/{N;N;N;N;p}'
+```
+
 ## awk
 
 ```bash
@@ -91,6 +97,31 @@ curl -s -X GET "https://httpbin.org/anything" -H "accept: application/json" | jq
 ```bash
 curl -s -X GET "https://httpbin.org/anything" -H "accept: application/json"  -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0" | jq
 ```
+
+- get all links on an url
+```bash
+data=$(curl -s https://vnexpress.net | grep "href=\"https:")
+echo $data | sed 's/href="/\nhref="/g' |  sed -nr 's/.*?href="(.*?\.html).*/\1/p' | sort
+echo $data | sed 's/href="/\nhref="/g' |  sed -nr 's/.*?href="(https:[^ "]+).*/\1/p' | sort | uniq
+```
+
+- write function to get all links
+
+```bash
+# function.sh file content
+function get_link()
+{
+  data=$(curl -s $1 | grep "href=\"https:")
+  echo $data | sed 's/href="/\nhref="/g' |  sed -nr 's/.*?href="(https:[^ "]+).*/\1/p' | sort | uniq
+}
+
+# call function to get links
+rm -rf links.txt
+export -f get_links
+get_links https://vnexpress.net | grep vnexpress | sort | uniq | tee -a links.txt
+cat links.txt | xargs -l1 -I{}  bash -c "get_links {} >> all_links.txt"
+cat all_links.txt | sort | uniq | sort | grep vnexpress.net | wc -l
+````
 
 ## git
 
@@ -147,6 +178,15 @@ git difftool -t meld -d master v2/master  -- *.vue --*.js -- *.ts
 git lgo
 git lgo --no-merges
 git lgo --no-merges --author=Jonh
+```
+
+# mysql
+```bash
+user=`cat .env | sed -nr 's/^DB_USERNAME="*([^"]+)/\1/p'`
+pass=`cat .env | sed -nr 's/^DB_PASSWORD="*([^"]+)/\1/p'`
+db=`cat .env | sed -nr 's/^DB_DATABASE="*([^"]+)/\1/p'`
+port=$(docker ps | grep laravel-mysql | awk {'print $(NF-2)'} | awk -F '[:\\->]+' {'print $2'}) 
+mysql -u $user -p$pass -h 127.0.0.1 -P $port --ssl-mode=disabled  --database $db -e "show tables;"
 ```
 
 ## gnome-terminal
