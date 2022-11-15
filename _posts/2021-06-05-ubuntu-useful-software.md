@@ -109,3 +109,13 @@ This post will list of useful software on ubuntu
 - [https://www.sweethome3d.com/](https://www.sweethome3d.com/)
 - [https://sourceforge.net/projects/sweethome3d/](https://sourceforge.net/projects/sweethome3d/)
 - [https://github.com/SweetHome3D/SweetHome3D](https://github.com/SweetHome3D/SweetHome3D)
+
+# 13. Profiler tool
+
+## kcachegrind
+- [https://github.com/KDE/kcachegrind](https://github.com/KDE/kcachegrind)
+
+- install
+```bash
+sudo apt install kcachegrind
+```
