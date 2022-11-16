@@ -31,6 +31,7 @@ This post will list of useful software on ubuntu
 # 3. Image processing
 ## gimp
 ## inkscape
+Whether you are an illustrator, designer, web designer or just someone who needs to create some vector imagery, Inkscape is for you!
 - [https://inkscape.org/](https://inkscape.org/)
 - [https://github.com/inkscape/inkscape](https://github.com/inkscape/inkscape)
 
