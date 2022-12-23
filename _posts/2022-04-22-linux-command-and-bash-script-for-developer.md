@@ -225,6 +225,15 @@ variable_name=$(ls -a)
 FILES=`sudo find . -type f -print | wc -l`
 ```
 
+## How can I get the monitor resolution using the command line?
+```bash
+xdpyinfo | grep dimensions
+xdpyinfo | awk '/dimensions/{print $2}'
+xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'
+```
+
+more detail [https://askubuntu.com/questions/584688/how-can-i-get-the-monitor-resolution-using-the-command-line](https://askubuntu.com/questions/584688/how-can-i-get-the-monitor-resolution-using-the-command-line)
+
 ## Out put to file (see more [https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file))
 ```
           | visible in terminal |   visible in file   | existing
