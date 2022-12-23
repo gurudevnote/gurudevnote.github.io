@@ -229,7 +229,7 @@ FILES=`sudo find . -type f -print | wc -l`
 ```bash
 xdpyinfo | grep dimensions
 xdpyinfo | awk '/dimensions/{print $2}'
-xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'
+xdpyinfo | grep -oP 'dimensions:\s+\K\S+'
 ```
 
 more detail [https://askubuntu.com/questions/584688/how-can-i-get-the-monitor-resolution-using-the-command-line](https://askubuntu.com/questions/584688/how-can-i-get-the-monitor-resolution-using-the-command-line)
