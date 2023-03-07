@@ -23,5 +23,23 @@ docker run -w /data -v ${PWD}:/data:delegated \
    --rm --env XDEBUG_MODE=coverage registry.gitlab.com/grahamcampbell/php:8.1 ./vendor/bin/phpunit --coverage-filter ./src --coverage-html ./html --testdox-html=./result.html
 ```
 
+# Run phpunit test with xdebug
+
+- create xdebug server like
+
+![config server for xdebug on phpstorm](/assets/config_server_for_xdebug_on_phpstorm.png)
+
+- run php with xdebug
+
+```bash
+docker run -w /data -v ${PWD}:/data:delegated  \
+    --rm --env XDEBUG_MODE=debug \
+    --env XDEBUG_CONFIG="client_host=$(ifconfig | sed -n '/wlp/,+1p' | grep inet | awk '{print $2}')" \
+    --env PHP_IDE_CONFIG="serverName=0.0.0.0" \
+    --env XDEBUG_SESSION=1 \
+    registry.gitlab.com/grahamcampbell/php:8.1 \
+    ./vendor/bin/phpunit  -- ./tests/Container/ContainerTest.php
+```
+
 # References:
 - [https://github.com/laravel/framework](https://github.com/laravel/framework)
