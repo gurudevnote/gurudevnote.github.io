@@ -221,4 +221,9 @@ parent(..)          // indicates the single node that is the parent of the conte
 preceding           // indicates all the nodes that precede the context node in the document except any ancestor, attribute and namespace nodes.
 preceding-sibling   // indicates all the nodes that have the same parent as the context node and appear before the context node in the source document.
 self (.)            // indicates the context node itself. It can be abbreviated as a single period (.).
+
+
+// 13. Some examples
+
+'//a//div[text()="Profile"]/ancestor::a'      //Get a element that contain a div with the text of div is Profile 
 ```
