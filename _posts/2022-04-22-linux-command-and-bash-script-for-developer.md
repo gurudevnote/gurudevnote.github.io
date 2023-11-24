@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux commands and bash script for developer
-tags: ["linux","command","sed", "jq","grep","bash","curl","awk","xargs","developer","ubuntu"]
+tags: ["linux","command","sed", "jq","grep","bash","curl","awk","xargs","developer","ubuntu","ffmpeg"]
 ---
 
 # Linux commands
@@ -71,6 +71,16 @@ ls -l | awk 'BEGIN {sum=0} {sum=sum+$5} END {print sum}'
 ```
 
 ## xargs
+
+Rename files to append .old on the end of the filename (-I allows {} to represents each file outputed from ls command)
+```bash
+ls *old | xargs -I {} mv {} {}.old
+```
+
+Prepare list file to concat videos
+```bash
+ls -1 | xargs -l1 -I {} echo file {} > files.txt
+```
 
 ## jq
 
@@ -187,6 +197,20 @@ pass=`cat .env | sed -nr 's/^DB_PASSWORD="*([^"]+)/\1/p'`
 db=`cat .env | sed -nr 's/^DB_DATABASE="*([^"]+)/\1/p'`
 port=$(docker ps | grep laravel-mysql | awk {'print $(NF-2)'} | awk -F '[:\\->]+' {'print $2'}) 
 mysql -u $user -p$pass -h 127.0.0.1 -P $port --ssl-mode=disabled  --database $db -e "show tables;"
+```
+
+# ffmpeg
+
+Fastest way to concat videos
+
+```bash
+ffmpeg -f concat -i file.txt -codec copy output.mp4
+```
+
+Copy video only from a video file
+
+```bash
+ffmpeg -i output.mp4 -map 0 -map -0:a -c copy output-no-sound.mp4
 ```
 
 ## gnome-terminal
