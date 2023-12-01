@@ -213,6 +213,18 @@ Copy video only from a video file
 ffmpeg -i output.mp4 -map 0 -map -0:a -c copy output-no-sound.mp4
 ```
 
+Fast forward video to 2x
+
+```bash
+ffmpeg -i output.mp4 -filter:v "setpts=0.5*PTS" output-fast.mp4
+```
+
+Speed up video and specify frame rate (for example 60fps)
+
+```bash
+ffmpeg -i input.mp4 -vf "setpts=0.25*PTS" -r 60 -an ouput.mp4
+```
+
 ## gnome-terminal
 
 - Execute a command in new terminal tab
