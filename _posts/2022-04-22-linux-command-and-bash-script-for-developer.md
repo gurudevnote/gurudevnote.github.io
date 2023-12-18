@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux commands and bash script for developer
-tags: ["linux","command","sed", "jq","grep","bash","curl","awk","xargs","developer","ubuntu","ffmpeg"]
+tags: ["linux","command","sed", "jq","grep","bash","curl","awk","xargs","developer","ubuntu","ffmpeg","imagemagick","gnome-terminal","pygmentize","git","mysql","convert"]
 ---
 
 # Linux commands
