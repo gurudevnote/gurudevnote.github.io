@@ -225,6 +225,20 @@ Speed up video and specify frame rate (for example 60fps)
 ffmpeg -i input.mp4 -vf "setpts=0.25*PTS" -r 60 -an ouput.mp4
 ```
 
+Export image from video, each 30 seconds export 1 image 
+
+```bash
+ffmpeg -i input.mp4 -vf fps=1/30 ./images/%04d.png
+```
+
+## ImageMagick
+
+Crop image at position x = 10, y = 10 with size 100x100
+
+```bash
+convert input.png -crop 100x100+10+10 output.png
+```
+
 ## gnome-terminal
 
 - Execute a command in new terminal tab
@@ -309,3 +323,5 @@ more detail [https://askubuntu.com/questions/584688/how-can-i-get-the-monitor-re
 - Unix / Linux - Regular Expressions with SED [https://www.tutorialspoint.com/unix/unix-regular-expressions.htm](https://www.tutorialspoint.com/unix/unix-regular-expressions.htm)
 - Bash scripting: Moving from backtick operator to $ parentheses [https://www.redhat.com/sysadmin/backtick-operator-vs-parens](https://www.redhat.com/sysadmin/backtick-operator-vs-parens)
 - How do I save terminal output to a file? [https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file)
+- Crop image with ImageMagick [https://linuxhint.com/crop-image-command-line-linux-mint/](https://linuxhint.com/crop-image-command-line-linux-mint/)
+- Extract image from video [https://www.bannerbear.com/blog/how-to-extract-images-from-a-video-using-ffmpeg/](https://www.bannerbear.com/blog/how-to-extract-images-from-a-video-using-ffmpeg/)
