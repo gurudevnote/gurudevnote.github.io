@@ -239,6 +239,17 @@ Crop image at position x = 10, y = 10 with size 100x100
 convert input.png -crop 100x100+10+10 output.png
 ```
 
+Convert image to gray scale
+
+```bash
+convert <img_in> -set colorspace Gray -separate -average <img_out>
+```
+
+Command that adjusts contrast, converts to grayscale, and applies thresholding
+```bash
+convert input.png -contrast-stretch 5% -colorspace Gray -threshold 80% output_processed.png
+```
+
 ## gnome-terminal
 
 - Execute a command in new terminal tab
