@@ -250,6 +250,13 @@ Command that adjusts contrast, converts to grayscale, and applies thresholding
 convert input.png -contrast-stretch 5% -colorspace Gray -threshold 80% output_processed.png
 ```
 
+Crop, adjusts contrast, converts to grayscale, and applies thresholding multiple images
+
+```bash
+cd images
+ls -1 | xargs -I {} convert {} -crop 1126x70+329+962 -contrast-stretch 5% -colorspace Gray -threshold 80% ../convert/{}
+```
+
 ## gnome-terminal
 
 - Execute a command in new terminal tab
