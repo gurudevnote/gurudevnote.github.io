@@ -82,6 +82,11 @@ Prepare list file to concat videos
 ls -1 | xargs -l1 -I {} echo file {} > files.txt
 ```
 
+Execute multiple commands with bash and xargs
+```bash
+ls -1 | xargs -l1 -I {} bash -c "echo {}; echo {}"
+```
+
 ## jq
 
 ## vi
