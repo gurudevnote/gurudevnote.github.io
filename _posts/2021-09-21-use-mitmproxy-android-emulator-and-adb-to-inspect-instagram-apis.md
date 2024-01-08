@@ -63,8 +63,39 @@ export ANDROID_SDK_ROOT=/otp/android-sdk
 emulator @generic_10 &
 ```
 
+## Install instagram
 
-# Install instagram
+```
+adb uninstall com.instagram.android
+adb install ~/Downloads/Instagram_v203.0.0.29.118_320303531_minAPI21\(armeabi-v7a\)\(nodpi\).apk
+adb shell am force-stop com.instagram.android
+adb shell monkey -p com.instagram.android -c android.intent.category.LAUNCHER 1
+```
+
+## Some useful adb command
+```
+adb shell "dumpsys activity | grep top-activity"
+```
+
+- Stop all open apps
+```
+adb shell "dumpsys activity | grep top-activity" | sed -nr "s/.*?:([a-z.]+).*?/\1/p" | xargs -l1 adb shell am force-stop
+```
+
+- Open settings
+```
+adb shell am start -a android.settings.SETTINGS
+```
+
+## Command to install android 30 with google api play service and create an emulator
+```bash
+sdkmanager --install "platforms;android-30"
+sdkmanager --licenses
+sdkmanager --install "platform-tools"
+sdkmanager --install "system-images;android-30;google_apis_playstore;x86_64"
+echo "no" | avdmanager --verbose create avd --force --name "generic_15" --package "system-images;android-30;google_apis_playstore;x86_64" --tag "google_apis_playstore" --abi "x86_64"
+emulator @generic_15 &
+```
 
 # Setup mitmproxy
 - Start mitmproxy and change all image to random image to reduce network traffic
