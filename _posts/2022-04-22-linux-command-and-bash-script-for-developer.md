@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux commands and bash script for developer
-tags: ["linux","command","sed", "jq","grep","bash","curl","awk","xargs","developer","ubuntu","ffmpeg","imagemagick","gnome-terminal","pygmentize","git","mysql","convert"]
+tags: ["linux","command","sed", "jq","grep","bash","curl","awk","xargs","developer","ubuntu","ffmpeg","imagemagick","gnome-terminal","pygmentize","git","mysql","convert","ssh"]
 ---
 
 # Linux commands
@@ -138,6 +138,12 @@ cat links.txt | xargs -l1 -I{}  bash -c "get_links {} >> all_links.txt"
 cat all_links.txt | sort | uniq | sort | grep vnexpress.net | wc -l
 ````
 
+## ssh
+- Test ssh connection
+```bash
+ssh -T git@github.com
+```
+
 ## git
 
 - Specify ssh private key when clone git
@@ -150,6 +156,13 @@ git -c core.sshCommand="ssh -i ~/.ssh/your_private_key" clone git@github.com:you
 
 ```bash
 git config core.sshCommand 'ssh -i ~/.ssh/your_private_key'
+```
+
+- Debug git command
+```
+GIT_SSH_COMMAND="ssh -v" git clone example
+GIT_SSH_COMMAND="ssh -vvv" git clone example
+ssh -vvvT git@github.com
 ```
 
 - Git config global: git config --global -e
