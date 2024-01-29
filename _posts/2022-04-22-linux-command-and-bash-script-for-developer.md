@@ -249,6 +249,12 @@ Export image from video, each 30 seconds export 1 image
 ffmpeg -i input.mp4 -vf fps=1/30 ./images/%04d.png
 ```
 
+Loop background music until video end
+
+```bash
+ffmpeg  -i output.mp4 -stream_loop -1 -i bacground-music.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y out.mp4
+```
+
 ## ImageMagick
 
 Crop image at position x = 10, y = 10 with size 100x100
