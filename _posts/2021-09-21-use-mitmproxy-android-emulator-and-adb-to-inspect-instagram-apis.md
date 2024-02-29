@@ -227,6 +227,7 @@ VBoxManage modifyvm vm-name --nested-hw-virt on
 
 # References:
 - [https://github.com/itsMoji/Instagram_SSL_Pinning](https://github.com/itsMoji/Instagram_SSL_Pinning)
+- https://github.com/Eltion/Instagram-SSL-Pinning-Bypass
 - [https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/](https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/)
 - [https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8](https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8)
 - [https://github.com/shroudedcode/apk-mitm](https://github.com/shroudedcode/apk-mitm)
