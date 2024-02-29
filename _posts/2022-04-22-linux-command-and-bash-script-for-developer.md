@@ -51,6 +51,11 @@ curl -s http://httpbin.org/anything | sed -n '/headers/,+4p'
 curl -s http://httpbin.org/anything | sed -n '/headers/{N;N;N;N;p}'
 ```
 
+- read a line from file
+```bash
+sed -n '1p' file.txt
+```
+
 ## awk
 
 ```bash
@@ -222,7 +227,7 @@ mysql -u $user -p$pass -h 127.0.0.1 -P $port --ssl-mode=disabled  --database $db
 Fastest way to concat videos
 
 ```bash
-ffmpeg -f concat -i file.txt -codec copy output.mp4
+ffmpeg -f concat -i files.txt -codec copy output.mp4
 ```
 
 Copy video only from a video file
@@ -252,7 +257,7 @@ ffmpeg -i input.mp4 -vf fps=1/30 ./images/%04d.png
 Loop background music until video end
 
 ```bash
-ffmpeg  -i output.mp4 -stream_loop -1 -i bacground-music.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y out.mp4
+ffmpeg -i output.mp4 -stream_loop -1 -i bacground-music.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y out.mp4
 ```
 
 ## ImageMagick
