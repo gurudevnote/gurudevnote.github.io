@@ -14,8 +14,8 @@ sudo mkdir -p /opt/android-sdk
 sudo mkdir -p /opt/android-sdk/cmdline-tools
 
 #install adroid commandline tools
-wget https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip
-sudo unzip commandlinetools-linux-7583922_latest.zip -d /opt/android-sdk/cmdline-tools
+wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
+sudo unzip commandlinetools-linux-9477386_latest.zip -d /opt/android-sdk/cmdline-tools
 sudo ln -sf /opt/android-sdk/cmdline-tools/cmdline-tools /opt/android-sdk/cmdline-tools/latest
 sudo chmod -R 777 /opt/android-sdk
 
@@ -199,6 +199,31 @@ echo "no" | avdmanager --verbose create avd --force --name "generic_15" --packag
 emulator @generic_15 &
 ```
 
+- Remove an adv
+
+```bash
+avdmanager delete avd --name <AVD_name>
+```
+
+## write a [script](/scripts/start_emulator.sh) to install image and then start emulator
+```bash
+#!/bin/bash
+#image="system-images;android-30;google_apis_playstore;x86_64"
+image=$1
+echo "install image: $image"
+platforms=`echo $image | awk -F ';' '{print $2}'`
+tag=`echo $image | awk -F ';' '{print $3}'`
+abi=`echo $image | awk -F ';' '{print $4}'`
+name="$platforms$abi_$tag"
+echo "create emulator: $name"
+sdkmanager --install "platforms;$platforms"
+sdkmanager --licenses
+sdkmanager --install "platform-tools"
+sdkmanager --install "$image"
+echo "no" | avdmanager --verbose create avd --force --name "$name" --package "$image" --tag "$tag" --abi "$abi"
+emulator "@$name" &
+```
+
 # Setup mitmproxy
 - Start mitmproxy and change all image to random image to reduce network traffic
 ```bash
@@ -227,7 +252,7 @@ VBoxManage modifyvm vm-name --nested-hw-virt on
 
 # References:
 - [https://github.com/itsMoji/Instagram_SSL_Pinning](https://github.com/itsMoji/Instagram_SSL_Pinning)
-- https://github.com/Eltion/Instagram-SSL-Pinning-Bypass
+- [https://github.com/Eltion/Instagram-SSL-Pinning-Bypass](https://github.com/Eltion/Instagram-SSL-Pinning-Bypass)
 - [https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/](https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/)
 - [https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8](https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8)
 - [https://github.com/shroudedcode/apk-mitm](https://github.com/shroudedcode/apk-mitm)
