@@ -89,6 +89,12 @@ adb shell cmd package list packages
 adb shell input keyevent 3
 ```
 
+- Reboot device
+```bash
+adb shell am broadcast -a android.intent.action.BOOT_COMPLETED
+adb reboot
+```
+
 - There are some key code
 ```
 0 -->  "KEYCODE_UNKNOWN" 
@@ -214,7 +220,7 @@ echo "install image: $image"
 platforms=`echo $image | awk -F ';' '{print $2}'`
 tag=`echo $image | awk -F ';' '{print $3}'`
 abi=`echo $image | awk -F ';' '{print $4}'`
-name="$platforms$abi_$tag"
+name="$platforms$abi$tag"
 echo "create emulator: $name"
 sdkmanager --install "platforms;$platforms"
 sdkmanager --licenses
