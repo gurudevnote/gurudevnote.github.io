@@ -260,6 +260,14 @@ Loop background music until video end
 ffmpeg -i output.mp4 -stream_loop -1 -i bacground-music.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y out.mp4
 ```
 
+Concat multiple videos and add background music
+
+```bash
+ls -1 *.MP4 | xargs -l1 -I {} echo file {} > files.txt
+ffmpeg -f concat -i files.txt -codec copy output.mp4
+ffmpeg -i output.mp4 -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y out.mp4
+```
+
 ## ImageMagick
 
 Crop image at position x = 10, y = 10 with size 100x100
