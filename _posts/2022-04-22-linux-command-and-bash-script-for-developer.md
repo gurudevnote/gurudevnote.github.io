@@ -376,7 +376,7 @@ more detail [https://askubuntu.com/questions/584688/how-can-i-get-the-monitor-re
 
 # References
 
-- Background music: ![motivated-to-create-15870.mp3](/assets/motivated-to-create-15870.mp3)
+- Background music: [motivated-to-create-15870.mp3](/assets/motivated-to-create-15870.mp3)
 - Speeding up/slowing down video [https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video](https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video)
 - Grep cheat sheet: [https://quickref.me/grep](https://quickref.me/grep) 
 - Sed cheat sheet: [https://quickref.me/sed](https://quickref.me/sed)
