@@ -275,6 +275,12 @@ ffmpeg -i output.mp4 -map 0:v -c:v copy -bsf:v hevc_mp4toannexb raw.h265
 ffmpeg -fflags +genpts -r 60 -i raw.h265 -c:v copy outputf.mp4
 ffmpeg -i outputf.mp4 -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y outf.mp4
 ```
+Generate 60fps and 120fps video from raw bitstream
+
+```bash
+ffmpeg -fflags +genpts -r 60 -i raw.h265 -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortest -c:v copy output60fps.mp4
+ffmpeg -fflags +genpts -r 120 -i raw.h265 -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortest -c:v copy output120fps.mp4 
+```
 
 ## ImageMagick
 
