@@ -282,6 +282,19 @@ ffmpeg -fflags +genpts -r 60 -i raw.h265 -stream_loop -1 -i ../motivated-to-crea
 ffmpeg -fflags +genpts -r 120 -i raw.h265 -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortest -c:v copy output120fps.mp4 
 ```
 
+Cut video with length 20s from 10s
+
+```bash
+ffmpeg -i output.mp4 -ss 00:00:10 -to 00:00:20 -c copy output-cut.mp4
+```
+
+Cut video only with length 20s from 10s
+
+```bash
+ffmpeg -i output.mp4 -ss 00:00:10 -to 00:00:20 -map 0 -map -0:a -c copy output-cut.mp4
+```
+
+
 ## ImageMagick
 
 Crop image at position x = 10, y = 10 with size 100x100
