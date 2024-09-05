@@ -285,13 +285,13 @@ ffmpeg -fflags +genpts -r 120 -i raw.h265 -stream_loop -1 -i ../motivated-to-cre
 Cut video with length 20s from 10s
 
 ```bash
-ffmpeg -i output.mp4 -ss 00:00:10 -to 00:00:20 -c copy output-cut.mp4
+ffmpeg -i output.mp4 -ss 00:00:10 -t 00:00:20 -c copy output-cut.mp4
 ```
 
 Cut video only with length 20s from 10s
 
 ```bash
-ffmpeg -i output.mp4 -ss 00:00:10 -to 00:00:20 -map 0 -map -0:a -c copy output-cut.mp4
+ffmpeg -i output.mp4 -ss 00:00:10 -t 00:00:20 -map 0 -map -0:a -c copy output-cut.mp4
 ```
 
 
