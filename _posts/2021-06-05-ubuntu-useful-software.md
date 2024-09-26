@@ -120,3 +120,13 @@ Whether you are an illustrator, designer, web designer or just someone who needs
 ```bash
 sudo apt install kcachegrind
 ```
+
+# 14. Measure tool
+
+## screenruler
+- [https://manpages.ubuntu.com/manpages/oracular/en/man1/screenruler.1.html](https://manpages.ubuntu.com/manpages/oracular/en/man1/screenruler.1.html)
+
+- install
+```bash
+sudo apt install screenruler
+```

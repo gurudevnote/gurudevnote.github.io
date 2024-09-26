@@ -213,6 +213,12 @@ git lgo --no-merges
 git lgo --no-merges --author=Jonh
 ```
 
+Show commit that delete files
+
+```bash
+git log --diff-filter=D --summary
+```
+
 # mysql
 ```bash
 user=`cat .env | sed -nr 's/^DB_USERNAME="*([^"]+)/\1/p'`
