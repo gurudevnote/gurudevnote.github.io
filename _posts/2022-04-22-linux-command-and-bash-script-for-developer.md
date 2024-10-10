@@ -219,6 +219,14 @@ Show commit that delete files
 git log --diff-filter=D --summary
 ```
 
+Sometimes the ssh key is not added to ssh-agent, you can add it by running the following command
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/your_private_key
+```
+
+
 # mysql
 ```bash
 user=`cat .env | sed -nr 's/^DB_USERNAME="*([^"]+)/\1/p'`
@@ -271,7 +279,7 @@ Concat multiple videos and add background music
 ```bash
 ls -1 *.MP4 | xargs -l1 -I {} echo file {} > files.txt
 ffmpeg -f concat -i files.txt -codec copy output.mp4
-ffmpeg -i output.mp4 -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y out.mp4
+ffmpeg -i files.txt -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y out.mp4
 ```
 
 Raw bitstream method to speeding up/slowing down video. This method is lossless and apart from changing the timestamps, copies the video stream as-is. Use this if you require no other changes to your input video.
