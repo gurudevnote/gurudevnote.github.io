@@ -94,6 +94,33 @@ ls -1 | xargs -l1 -I {} bash -c "echo {}; echo {}"
 
 ## jq
 
+use jq to transform data from json to another format
+
+```bash
+echo '
+    {
+        "Credentials": {
+            "AccessKeyId": "xxxx",
+            "SecretAccessKey": "yyy",
+            "SessionToken": "zzzz",
+            "Expiration": "2024-10-10T08:13:09+00:00"
+        },
+        "AssumedRoleUser": {
+            "AssumedRoleId": "aaaaa",
+            "Arn": "arn:aws:sts::bbb:assumed-role/ccc/ddd_role"
+        }
+    }
+' | jq -r '
+    .Credentials | 
+"
+export AWS_ACCESS_KEY_ID=\(.AccessKeyId)
+export AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)
+export AWS_SESSION_TOKEN=\(.SessionToken)
+export AWS_SESSION_EXPIRATION=\(.Expiration)"  
+'
+```
+
+
 ## vi
 
 ## curl
