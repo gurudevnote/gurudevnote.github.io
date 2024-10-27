@@ -75,6 +75,15 @@ Whether you are an illustrator, designer, web designer or just someone who needs
 - [https://github.com/blender/blender](https://github.com/blender/blender)
 
 # 8. Document viewer
+
+## glow
+Render markdown on the CLI, with pizzazz!
+```bash
+snap install glow
+```
+
+-[https://github.com/charmbracelet/glow](https://github.com/charmbracelet/glow)
+
 ## evince
 -[https://gitlab.gnome.org/GNOME/evince](https://gitlab.gnome.org/GNOME/evince)
 -[https://github.com/GNOME/evince](https://github.com/GNOME/evince)

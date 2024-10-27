@@ -311,11 +311,18 @@ ffmpeg -i files.txt -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortes
 
 Raw bitstream method to speeding up/slowing down video. This method is lossless and apart from changing the timestamps, copies the video stream as-is. Use this if you require no other changes to your input video.
 
-```
+```bash
 ffmpeg -i output.mp4 -map 0:v -c:v copy -bsf:v hevc_mp4toannexb raw.h265
 ffmpeg -fflags +genpts -r 60 -i raw.h265 -c:v copy outputf.mp4
 ffmpeg -i outputf.mp4 -stream_loop -1 -i ../motivated-to-create-15870.mp3 -shortest -map 0:v:0 -map 1:a:0  -codec copy -y outf.mp4
 ```
+
+Concat multiple videos raw bitstream to one file 
+
+```bash
+ls -1 *.MP4 | xargs -l1 -I {} ffmpeg -i {} -map 0:v -c:v copy -bsf:v hevc_mp4toannexb -f hevc - >> raw.h265
+```
+
 Generate 60fps and 120fps video from raw bitstream
 
 ```bash
