@@ -265,6 +265,8 @@ mysql -u $user -p$pass -h 127.0.0.1 -P $port --ssl-mode=disabled  --database $db
 
 # ffmpeg
 
+Version: ffmpeg version 4.2.7-0ubuntu0.1 Copyright (c) 2000-2022 the FFmpeg developers
+
 Fastest way to concat videos
 
 ```bash
