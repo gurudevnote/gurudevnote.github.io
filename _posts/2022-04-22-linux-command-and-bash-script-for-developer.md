@@ -371,6 +371,38 @@ cd images
 ls -1 | xargs -I {} convert {} -crop 1126x70+329+962 -contrast-stretch 5% -colorspace Gray -threshold 80% ../convert/{}
 ```
 
+- Convert multiple image to pdf
+
+Edit the policy.xml file: Open the policy.xml file with a text editor (e.g., nano or vim)
+
+```bash
+sudo vi /etc/ImageMagick-6/policy.xml
+```
+
+Allow PDF operations: Look for lines related to PDF and modify them to allow reading and writing. For example, change:
+
+```xml
+<policy domain="coder" rights="none" pattern="PDF" />
+```
+
+to 
+
+```xml
+<policy domain="coder" rights="read|write" pattern="PDF" />
+```
+
+Run command to convert multiple image to pdf
+
+```bash
+convert *.jpg output.pdf
+```
+
+Resize multiple images. Apply the -filter option with Lanczos or Triangle to enhance perceived quality:
+
+```bash
+ls *.jpg -1 | xargs -I {} convert {} -resize 50% -filter Lanczos -quality 85 ./resize/{}
+```
+
 ## gnome-terminal
 
 - Execute a command in new terminal tab

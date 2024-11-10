@@ -35,6 +35,11 @@ Whether you are an illustrator, designer, web designer or just someone who needs
 - [https://inkscape.org/](https://inkscape.org/)
 - [https://github.com/inkscape/inkscape](https://github.com/inkscape/inkscape)
 
+## Imagemagick
+ImageMagick® is a free, open-source software suite, used for editing and manipulating digital images. It can be used to create, edit, compose, or convert bitmap images, and supports a wide range of file formats, including JPEG, PNG, GIF, TIFF, and Ultra HDR
+- [https://imagemagick.org/index.php](https://imagemagick.org/index.php)
+- [https://github.com/ImageMagick/ImageMagick](https://github.com/ImageMagick/ImageMagick)
+
 # 4. Video editor
 ## kdenlive
 - [https://kdenlive.org/en/](https://kdenlive.org/en/)
