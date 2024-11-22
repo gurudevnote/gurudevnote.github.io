@@ -6,7 +6,12 @@
 name: Some dev notes
 
 # Short bio or description (displayed in the header)
-description:
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to my tech blog, where I document my software development journey, 
+  share project experiences, and explore tools and technologies I love.
+  
+  This space serves as both a personal reference and a way to connect with fellow developers,
+  encouraging learning and collaboration in the tech community.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
@@ -44,7 +49,7 @@ google_tag_manager: GTM-MZP8WQ
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: nguyenhuuhuy.github.io
+url: gurudevnote.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
