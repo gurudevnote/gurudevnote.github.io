@@ -144,3 +144,14 @@ sudo apt install kcachegrind
 ```bash
 sudo apt install screenruler
 ```
+# 15. Text to speed
+
+## espeak
+
+eSpeak NG is an open source speech synthesizer that supports more than hundred languages and accents.
+
+```bash
+sudo apt install espeak espeak-ng
+```
+
+source code: [https://github.com/espeak-ng/espeak-ng](https://github.com/espeak-ng/espeak-ng)
